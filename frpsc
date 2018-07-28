@@ -1,4 +1,5 @@
 #! /bin/bash
+# reference http://koolshare.cn/thread-65379-1-1.html
 # chkconfig: 2345 55 25
 # Description: Startup script for frps/frpc on Debian. Place in /etc/init.d and
 # run 'update-rc.d -f frps/frpc defaults', or use the appropriate command on your
@@ -7,7 +8,7 @@
 #   System Required:  CentOS/Debian/Ubuntu (32bit/64bit)
 #   Description:  Manager for frps/frpc, Written by Andrew
 #   Author: Andrew
-#   Intro:  http://koolshare.cn/thread-65379-1-1.html
+#   Intro:  https://github.com/currycan/frps-frpc/
 #=======================================================
 ### BEGIN INIT INFO
 # Provides:          frps/frpc
@@ -45,9 +46,9 @@ fun_clangcn()
 {
     echo ""
     echo "+--------------------------------------------------+"
-    echo "|        Manager for ${ProgramName}, Written by Clang        |"
+    echo "|        Manager for ${ProgramName}, Written by Andrew        |"
     echo "+--------------------------------------------------+"
-    echo "| Intro: http://koolshare.cn/thread-65379-1-1.html |"
+    echo "| Intro: https://github.com/currycan/frps-frpc/ |"
     echo "+--------------------------------------------------+"
     echo ""
 }
