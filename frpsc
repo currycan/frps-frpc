@@ -21,7 +21,10 @@
 ### END INIT INFO
 
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-if [ $0 == "frps" ];then
+
+frps=$(echo $0 | grep "frps")
+frpc=$(echo $0 | grep "frpc")
+if [[ a"$frps" != "a" ]];then
     ProgramName="Frps"
     ProgramPath="/usr/local/frps"
     NAME=frps
@@ -29,12 +32,13 @@ if [ $0 == "frps" ];then
     CONFIGFILE=${ProgramPath}/frps.ini
     SCRIPTNAME=/etc/init.d/${NAME}
     program_version=`${BIN} --version`
-elif [ $0 == "frpc" ];then
+    echo $ProgramName $BIN $CONFIGFILE $SCRIPTNAME $program_version
+elif [ a"$frpc" != "a" ];then
     ProgramName="Frpc"
     ProgramPath="/usr/local/frpc"
     NAME=frpc
     BIN=${ProgramPath}/${NAME}
-    CONFIGFILE=${ProgramPath}/frps.ini
+    CONFIGFILE=${ProgramPath}/frpc.ini
     SCRIPTNAME=/etc/init.d/${NAME}
     program_version=`${BIN} --version`
 fi
@@ -173,4 +177,5 @@ case "${arg1}" in
         RET_VAL=1
     ;;
 esac
+
 exit $RET_VAL
