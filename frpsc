@@ -20,7 +20,7 @@
 # Description:       starts frps/frpc using start-stop
 ### END INIT INFO
 
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+export PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 ProgramName="Frps-Frpc"
 if [ $0 == "frps" ];then
     ProgramPath="/usr/local/frps"
