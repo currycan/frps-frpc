@@ -32,7 +32,6 @@ if [[ a"$frps" != "a" ]];then
     CONFIGFILE=${ProgramPath}/frps.ini
     SCRIPTNAME=/etc/init.d/${NAME}
     program_version=`${BIN} --version`
-    echo $ProgramName $BIN $CONFIGFILE $SCRIPTNAME $program_version
 elif [ a"$frpc" != "a" ];then
     ProgramName="Frpc"
     ProgramPath="/usr/local/frpc"
