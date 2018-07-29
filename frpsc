@@ -82,7 +82,7 @@ fun_start()
     fi
     fun_load_config
     echo -n "Starting ${ProgramName}(${program_version})..."
-    ${BIN} -c ${CONFIGFILE} >> /var/log/${NAME} &
+    ${BIN} -c ${CONFIGFILE} >> /var/log/${NAME}/${NAME}.log &
     sleep 1
     if ! fun_check_run; then
         echo "start failed"
